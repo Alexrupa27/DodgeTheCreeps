@@ -1,11 +1,12 @@
 extends Area2D
+signal hit
 
 export var speed = 400 # A quina velocitat es mourà el jugador (píxels/seg).
 var screen_size # Mida de la finestra de joc.
 
 func _ready():
 	screen_size = get_viewport_rect().size
-	
+	hide()
 
 
 func _process(delta):
@@ -33,3 +34,7 @@ func _process(delta):
 	elif velocity.y != 0:
 		$AnimatedSprite.animation = "up"
 		$AnimatedSprite.flip_v = velocity.y > 0
+
+
+func _on_Player_body_entered(body):
+	pass # Replace with function body.
