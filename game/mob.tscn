@@ -41,6 +41,7 @@ animation = "fly"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1, 2 )
 rotation = 1.5708
 shape = SubResource( 2 )
 
